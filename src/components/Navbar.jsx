@@ -60,10 +60,9 @@ const Navbar = () => {
 
 const NavLinks = ({ handleHomeClick, closeMenu }) => {
   const navLinkClass = ({ isActive }) =>
-    `px-3 py-2 rounded-md text-sm ${
-      isActive
-        ? 'bg-secondaryColor text-white hover:opacity-75'
-        : 'hover:bg-slate-100'
+    `px-3 py-2 rounded-md text-sm ${isActive
+      ? 'bg-secondaryColor text-white hover:opacity-75'
+      : 'hover:bg-slate-100'
     } block text-center w-full whitespace-nowrap`
 
   return (
@@ -80,6 +79,9 @@ const NavLinks = ({ handleHomeClick, closeMenu }) => {
       </NavLink>
       <NavLink to={'/stocks'} onClick={closeMenu} className={navLinkClass}>
         Stock Ranking
+      </NavLink>
+      <NavLink to={'/MutualFundOverlap/'} onClick={closeMenu} className={navLinkClass}>
+        Compare Funds
       </NavLink>
       <NavLink to={'/agreement'} onClick={closeMenu} className={navLinkClass}>
         Agreement
